@@ -36,6 +36,7 @@ namespace FieldDefinitionGenerator.Logic.Services
             resultBuilder.AppendLine($"{AddTabs(1)}LogicalName = \"{entityMetadata.LogicalName}\",");
             resultBuilder.AppendLine($"{AddTabs(1)}LogicalSetName = \"{entityMetadata.EntitySetName}\",");
 
+            resultBuilder.AppendLine();
 
             foreach (var attr in attrList)
             {
