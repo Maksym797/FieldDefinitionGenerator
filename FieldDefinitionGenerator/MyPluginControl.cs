@@ -137,21 +137,22 @@ namespace FieldDefinitionGenerator
                         LogicalName = entityName
                     };
 
-                    args.Result = Service.Execute(request);
+                    if (Service.Execute(request) is RetrieveEntityResponse result)
+                    {
+                        var generationService = (IGenerationService)new TypeScriptGenerationService(Service);
+
+                        args.Result = generationService.Generate(result.EntityMetadata);
+                    }
                 },
                 PostWorkCallBack = (args) =>
                 {
                     if (args.Error != null)
                     {
                         MessageBox.Show(args.Error.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
-
-                    if (args.Result is RetrieveEntityResponse result)
-                    {
-                        var generationService = (IGenerationService)new TypeScriptGenerationService(Service);
-
-                        codeTextBox.Text = generationService.Generate(result.EntityMetadata);
-                    }
+                 
+                    codeTextBox.Text = args.Result as string ?? "Something went wrong.";
                 }
             });
         }
