@@ -217,12 +217,7 @@
       <DependentUpon>MyPluginControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\FieldDefinitionGenerator.Logic\FieldDefinitionGenerator.Logic.csproj">
-      <Project>{36f40127-a402-4d6b-a911-00a06dce3a05}</Project>
-      <Name>FieldDefinitionGenerator.Logic</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <Import Project="..\FieldDefinitionGenerator.Logic.Shared\FieldDefinitionGenerator.Logic.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>IF $(ConfigurationName) == Debug (

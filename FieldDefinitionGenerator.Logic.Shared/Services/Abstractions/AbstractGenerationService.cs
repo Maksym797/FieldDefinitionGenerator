@@ -15,7 +15,7 @@ namespace FieldDefinitionGenerator.Logic.Services.Abstractions
 
         protected string AddTabs(int number)
         {
-            return new string(' ', number * 5);
+            return new string(' ', number * 2);
         }
     }
 }

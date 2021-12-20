@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldDefinitionGenerator", "FieldDefinitionGenerator\FieldDefinitionGenerator.csproj", "{8655CDAC-AE9D-46CF-AC97-F102A20E0D9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FieldDefinitionGenerator.Logic", "FieldDefinitionGenerator.Logic\FieldDefinitionGenerator.Logic.csproj", "{36F40127-A402-4D6B-A911-00A06DCE3A05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FieldDefinitionGenerator.CrmPlugin", "FieldDefinitionGenerator.Logic\FieldDefinitionGenerator.CrmPlugin.csproj", "{36F40127-A402-4D6B-A911-00A06DCE3A05}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FieldDefinitionGenerator.Logic.Shared", "FieldDefinitionGenerator.Logic.Shared\FieldDefinitionGenerator.Logic.Shared.shproj", "{E9716F9A-5CE1-491C-B1E3-480E840B04E1}"
 EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		FieldDefinitionGenerator.Logic.Shared\FieldDefinitionGenerator.Logic.Shared.projitems*{8655cdac-ae9d-46cf-ac97-f102a20e0d9c}*SharedItemsImports = 4
+		FieldDefinitionGenerator.Logic.Shared\FieldDefinitionGenerator.Logic.Shared.projitems*{e9716f9a-5ce1-491c-b1e3-480e840b04e1}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
